@@ -14,8 +14,8 @@ namespace CosmosDbDemo.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        private CosmosClient CosmosClient { get; set; }
-        private Microsoft.Azure.Cosmos.Container Container { get; set; }
+        private CosmosClient CosmosClient { get; }
+        private Microsoft.Azure.Cosmos.Container Container { get; }
         public BooksController(CosmosClient cosmosClient)
         {
             CosmosClient = cosmosClient;

@@ -24,8 +24,7 @@ namespace CosmosDbDemo
             services.AddControllers();
 
             var cosmosClient =
-                new CosmosClient(
-                    "AccountEndpoint=https://cosmos-test-stan.documents.azure.com:443/;AccountKey=gtio3qwjLJZ9kZ3VEUWz4tDyPnBF4n7FTEi2KeDv7uknP8V3YEl7LQihwEm62bQ99ZSfQa3HEqkGPnuc9ckDkQ==");
+                new CosmosClient(Configuration.GetConnectionString("Cosmos"));
 
             services.AddSingleton<CosmosClient>(cosmosClient);
         }
